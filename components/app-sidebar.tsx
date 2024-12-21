@@ -34,31 +34,27 @@ export function AppSidebar() {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild>
-              <Link href="/">
-                <div className="bg-primary text-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <GalleryVerticalEnd className="size-4" />
+            <SidebarMenuButton size='lg' asChild>
+              <Link href='/'>
+                <div className='bg-primary text-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg'>
+                  <GalleryVerticalEnd className='size-4' />
                 </div>
-                <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-semibold">Docs</span>
-                  <span className="">v1.0.0</span>
+                <div className='flex flex-col gap-0.5 leading-none'>
+                  <span className='font-semibold'>Docs</span>
+                  <span className=''>v1.0.0</span>
                 </div>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
         <form>
-          <SidebarGroup className="py-0">
-            <SidebarGroupContent className="relative">
-              <Label htmlFor="search" className="sr-only">
+          <SidebarGroup className='py-0'>
+            <SidebarGroupContent className='relative'>
+              <Label htmlFor='search' className='sr-only'>
                 Search
               </Label>
-              <Input
-                id="search"
-                placeholder="Search the docs..."
-                className="pl-8"
-              />
-              <Search className="pointer-events-none absolute left-2 top-1/2 size-4 -translate-y-1/2 select-none opacity-50" />
+              <Input id='search' placeholder='Search the docs...' className='pl-8' />
+              <Search className='pointer-events-none absolute left-2 top-1/2 size-4 -translate-y-1/2 select-none opacity-50' />
             </SidebarGroupContent>
           </SidebarGroup>
         </form>
@@ -68,7 +64,7 @@ export function AppSidebar() {
           <SidebarGroupLabel>Navigation</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
-              {navItems.map(item => (
+              {navItems.map((item) => (
                 <SidebarMenuItem key={item.url}>
                   <SidebarMenuButton asChild isActive={pathname === item.url}>
                     <Link href={item.url}>{item.title}</Link>
@@ -82,4 +78,3 @@ export function AppSidebar() {
     </Sidebar>
   )
 }
-
