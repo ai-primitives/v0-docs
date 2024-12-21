@@ -1,0 +1,66 @@
+'use client'
+
+export const metadata = {
+  title: 'API Reference | Minimal Docs Site',
+  description: 'Detailed API reference for our library',
+}
+
+# API Reference
+
+This section provides a detailed reference for the API of our library.
+You'll find information about available methods, their parameters,
+and return values.
+
+## Client
+
+The main class for interacting with our API.
+
+### Constructor
+
+```typescript
+new Client(config: ClientConfig)
+```
+
+Creates a new instance of the Client class.
+
+#### Parameters
+
+- `config`: An object containing the client configuration
+
+### Methods
+
+#### doSomething()
+
+```typescript
+async doSomething(): Promise<Result>
+```
+
+Performs an action and returns a result.
+
+#### Returns
+
+A Promise that resolves to a Result object.
+
+## Types
+
+### ClientConfig
+
+```typescript
+interface ClientConfig {
+  apiKey: string;
+  environment: 'production' | 'development';
+}
+```
+
+### Result
+
+```typescript
+interface Result {
+  id: string;
+  data: any;
+  timestamp: number;
+}
+```
+
+For more detailed information about specific components and their props,
+please refer to the Components section. 

@@ -1,0 +1,43 @@
+'use client'
+
+export const metadata = {
+  title: "Getting Started | Minimal Docs Site",
+  description: "Learn how to get started with our documentation",
+};
+
+# Getting Started
+
+Welcome to the getting started guide for our documentation site. Follow these steps to set up your environment and begin using our tools.
+
+## Installation
+
+To install our package, run the following command in your terminal:
+
+```bash
+npm install @our-company/package
+```
+
+## Configuration
+
+After installation, you need to set up the configuration file. Create a file named `config.js` in your project root and add the following content:
+
+```javascript
+module.exports = {
+  apiKey: 'YOUR_API_KEY',
+  environment: 'production'
+}
+```
+
+## Usage
+
+Here's a basic example of how to use our package in your project:
+
+```typescript
+import { Client } from '@our-company/package';
+
+const client = new Client();
+const result = await client.doSomething();
+console.log(result);
+```
+
+For more detailed information, please check out our Components and API Reference sections. 
